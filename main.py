@@ -2,6 +2,13 @@ from scanner import get_new_dexscreener_pairs
 from filter import is_token_sellable
 from filter_extended import extended_token_checks
 from trader_simulator import simulate_trade
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+telegram_token = os.getenv("")
+telegram_chat_id = os.getenv("TELEGRAM_CHAT_ID")
 
 def main():
     print("🚀 Поиск новых токенов...")
